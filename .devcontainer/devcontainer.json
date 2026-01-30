@@ -8,5 +8,6 @@
     "ms-azuretools.vscode-docker",
     "ms-vscode-remote.remote-containers"
   ],
-  "forwardPorts": [80, 5432]
+  "forwardPorts": [80, 5432],
+  "postCreateCommand": "sudo chmod a+x \"$(pwd)\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)\" /var/www/html && sudo psql postgresql://user:password@127.0.0.1:5432/article -f .devcontainer/setup-postgresql.sql"
 }
