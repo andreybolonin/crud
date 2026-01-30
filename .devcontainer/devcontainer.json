@@ -22,7 +22,7 @@
 		3306
 	],
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "sudo sh .devcontainer/startup.sh"
+	"postCreateCommand": "mysql -h 127.0.0.1 -uroot -pmariadb < .devcontainer/setup-mariadb.sql --skip-ssl"
 	// Configure tool-specific properties.
 	// "customizations": {},
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
