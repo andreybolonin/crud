@@ -14,7 +14,7 @@ services:
             POSTGRES_HOST: database
             POSTGRES_USER: user
             POSTGRES_PASSWORD: password
-            POSTGRES_DB: mydatabase
+            POSTGRES_DB: article
     database:
         image: postgres:13
         restart: always

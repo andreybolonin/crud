@@ -1,5 +1,5 @@
 <?php
-$pdo = new PDO("pgsql:host=127.0.0.1;dbname=lms", 'admin', 'root');
+$pdo = new PDO("pgsql:host=database;dbname=article", 'user', 'password');
 $stmt = $pdo->prepare('SELECT * FROM article');
 $stmt->execute();
 $articles = $stmt->fetchAll();
