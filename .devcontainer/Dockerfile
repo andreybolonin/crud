@@ -1,5 +1,5 @@
 # Use a base image with PHP and Apache
-FROM php:8.1-apache
+FROM mcr.microsoft.com/devcontainers/php:0-8.2
 
 # Install necessary extensions
 RUN apt-get update && apt-get install -y libpq-dev
