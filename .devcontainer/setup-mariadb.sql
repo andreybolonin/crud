@@ -1,5 +1,5 @@
 -- Using the root user, grant access to the mariadb user.
-GRANT ALL PRIVILEGES ON *.* TO 'user'@'%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'mariadb'@'%' IDENTIFIED BY 'mariadb';
 
 -- Create a table in the database
 USE article;
