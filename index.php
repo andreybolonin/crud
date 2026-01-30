@@ -1,5 +1,5 @@
 <?php
-$pdo = new PDO("mysql:host=127.0.0.1;dbname=article", 'user', 'password');
+$pdo = new PDO("mysql:host=127.0.0.1;dbname=article", 'mariadb', 'mariadb');
 $stmt = $pdo->prepare('SELECT * FROM article');
 $stmt->execute();
 $articles = $stmt->fetchAll();

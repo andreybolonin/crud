@@ -1,6 +1,6 @@
 <?php
 $timestamp = date('Y-m-d H:i:s', time());
-$pdo = new PDO("mysql:host=127.0.0.1;dbname=article", 'user', 'password');
+$pdo = new PDO("mysql:host=127.0.0.1;dbname=article", 'mariadb', 'mariadb');
 
 if (isset($_POST['name']) && isset($_POST['description']) && isset($_POST['created_at'])) {
     $stmt = $pdo->prepare('UPDATE article SET name = :name, description = :description, created_at = :created_at WHERE id = :id');
