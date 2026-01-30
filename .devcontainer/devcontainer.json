@@ -1,0 +1,12 @@
+{
+  "name": "PHP & PostgreSQL Dev Container",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app", // The name of your PHP service in docker-compose.yml
+  "workspaceFolder": "/workspace",
+  "extensions": [
+    "ms-vscode.php-pack", // Example PHP extension pack
+    "ms-azuretools.vscode-docker",
+    "ms-vscode-remote.remote-containers"
+  ],
+  "forwardPorts": [80, 5432]
+}

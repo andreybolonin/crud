@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+    app:
+        image: custom-php-image # You will need to build this or use a public one
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - ../:/workspace:cached
+        ports:
+            - "80:80"
+        environment:
+            # Environment variables for your PHP app to connect to the database
+            POSTGRES_HOST: database
+            POSTGRES_USER: user
+            POSTGRES_PASSWORD: password
+            POSTGRES_DB: mydatabase
+    database:
+        image: postgres:13
+        restart: always
+        environment:
+            POSTGRES_USER: user
+            POSTGRES_PASSWORD: password
+            POSTGRES_DB: article
+        volumes:
+            - pgdata:/var/lib/postgresql/data
+volumes:
+    pgdata:
